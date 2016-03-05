@@ -22,5 +22,8 @@ module NoMasTodo
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+		#If you are deploying on Heroku with Rails 3.2 only, you may want to set:
+		#config.assets.initialize_on_precompile = false
   end
 end
