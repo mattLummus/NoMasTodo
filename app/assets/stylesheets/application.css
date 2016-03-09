@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+=require base.scss
+=require menus/footers.scss
+=require menus.scss
+=require home.scss

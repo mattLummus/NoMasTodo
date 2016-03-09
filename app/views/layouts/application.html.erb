@@ -8,7 +8,15 @@
 </head>
 <body>
 
-<%= yield %>
+	<%# if a view requests a custom header we yield; otherwise render the standard header. %>
+	<div id="header-container"> <%= content_for?(:header)? yield(:header) : render('menus/headers/default')%> </div>
+
+
+	<div id="body-container"> <%= yield %> </div>
+
+
+	<%# if a view requests a custom footer we yield; otherwise render the standard footer. %>
+	<div id="footer-container"> <%= content_for?(:footer)? yield(:footer) : render('menus/footers/default')%> </div>
 
 </body>
 </html>
